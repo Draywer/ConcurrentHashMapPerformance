@@ -50,7 +50,7 @@ public class Main {
             service.submit(new WriteMapRunnable(hashMap, MAX_VALUE));
             service.submit(new ReadMapRunnable(hashMap, MAX_VALUE));
         }
-        service.awaitTermination(10, TimeUnit.SECONDS);
+        service.awaitTermination(3, TimeUnit.SECONDS);
         logger.log("Окончание записи / чтения hashMap");
 
         service.shutdown();
